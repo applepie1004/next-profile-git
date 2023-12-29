@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
               <div className="grid ml-auto mr-auto place-items-center w-[150px] h-[150px] overflow-hidden rounded-full">
                 <Image
                   alt="profile img"
-                  src={"/next-profile/profile_img.jpg"}
+                  src={"/profile_img.jpg"}
                   width={150}
                   height={0}
                   style={{ marginTop: `-20px` }}
