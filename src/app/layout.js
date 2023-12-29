@@ -20,8 +20,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={notoSansKr.className}>
-        <main className="flex md:grid grid-rows-3 grid-cols-5 gap-4 min-h-screen flex-col p-24">
-          <div className="row-span-3 flex md:grid grid-rows-3">
+        <main className="flex md:grid grid-rows-3 grid-cols-12 gap-4 min-h-screen flex-col p-24">
+          <div className="row-span-3 col-span-3 flex md:grid grid-rows-3">
             <div className="row-span-1 text-center place-items-center p-5">
               <div className="grid ml-auto mr-auto place-items-center w-[150px] h-[150px] overflow-hidden rounded-full">
                 <Image
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
             <div className="row-span-2 pt-5 w-full">
               <p className="break-all">
                 아직 부족한 것이 많은 개발자입니다. 항상 배우고 나누겠다는
-                마음으로 개발에 임하고 있습니다. 또한 사내 동호회장 토론세미나
+                마음으로 개발에 임하고 있습니다. 또한 사내 동호회장, 토론세미나
                 등의 참여로 다양한 사원들과 교류도 진행하며 커뮤니케이션 능력을
                 기르고 있습니다.
               </p>
@@ -80,7 +80,7 @@ export default function RootLayout({ children }) {
               </p>
             </div>
           </div>
-          <div className="row-span-3 col-span-4">
+          <div className="row-span-3 col-span-9">
             <ul className="flex font-bold">
               <Link
                 href="/"
