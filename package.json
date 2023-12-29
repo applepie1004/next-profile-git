@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "predeploy": "npm run build",
-    "deploy": "echo out/.nojekyll && gh-pages -d out --dotfiles",
+    "deploy": "fsutil file createnew out/.nojekyll 0 && gh-pages -d out --dotfiles",
     "start": "next start",
     "lint": "next lint"
   },
