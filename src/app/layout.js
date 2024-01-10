@@ -1,5 +1,5 @@
 "use client";
-import { Roboto, Noto_Sans_KR } from "next/font/google";
+import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,11 +17,17 @@ const notoSansKr = Noto_Sans_KR({
 // };
 export default function RootLayout({ children }) {
   const pathname = usePathname();
+  const menus = [
+    { name: "Main", url: "/" },
+    { name: "Skill", url: "/skill/" },
+    { name: "Profile", url: "/profile/" },
+  ];
+
   return (
     <html lang="en">
       <body className={notoSansKr.className}>
-        <main className="flex md:grid grid-rows-3 grid-cols-12 gap-4 min-h-screen flex-col p-24">
-          <div className="row-span-3 col-span-3 flex md:grid grid-rows-3">
+        <main className="flex text-xs grid-rows-3 grid-cols-5 gap-4 min-h-screen flex-col text-base md:grid lg:p-24">
+          <div className="row-span-3 flex grid-rows-3 md:grid">
             <div className="row-span-1 text-center place-items-center p-5">
               <div className="grid ml-auto mr-auto place-items-center w-[150px] h-[150px] overflow-hidden rounded-full">
                 <Image
@@ -34,78 +40,72 @@ export default function RootLayout({ children }) {
                 ></Image>
               </div>
             </div>
-            <div className="row-span-2 pt-5 w-full">
-              <p className="break-all">
+            <div className="row-span-2 pt-5 w-full mt-3 pr-4 sm:mt-0">
+              <p className="break-all text-sm sm:text-base">
                 아직 부족한 것이 많은 개발자입니다. 항상 배우고 나누겠다는
                 마음으로 개발에 임하고 있습니다. 또한 사내 동호회장, 토론세미나
                 등의 참여로 다양한 사원들과 교류도 진행하며 커뮤니케이션 능력을
                 기르고 있습니다.
               </p>
 
-              <p className="mt-5 text-xs flex">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-4 h-4"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
-                  />
-                </svg>
+              <div className="block text-xs sm:mt-5 sm:flex">
+                <p className="mt-3 flex sm:mt-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-4 h-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                    />
+                  </svg>
 
-                <Link href="mailto:hyeoo1004@gmail.com">
-                  hyeoo1004@gmail.com
-                </Link>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-4 h-4 ml-[10px]"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
-                  />
-                </svg>
-                <span>010-2927-8987</span>
-              </p>
+                  <Link href="mailto:hyeoo1004@gmail.com">
+                    hyeoo1004@gmail.com
+                  </Link>
+                </p>
+                <p className="mt-3 flex sm:mt-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-4 h-4 sm:ml-[10px]"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                    />
+                  </svg>
+                  <span>010-2927-8987</span>
+                </p>
+              </div>
             </div>
           </div>
-          <div className="row-span-3 col-span-9">
-            <ul className="flex font-bold">
-              <Link
-                href="/"
-                className={`list-none p-2 ${
-                  pathname == "/" ? "bg-blue-300" : "bg-blue-200"
-                } mr-[1px] rounded-t-lg hover:bg-blue-400`}
-              >
-                Main
-              </Link>
-              <Link
-                href="/skill"
-                className={`list-none p-2 ${
-                  pathname == "/skill" ? "bg-blue-300" : "bg-blue-200"
-                } mr-[1px] rounded-t-lg hover:bg-blue-400`}
-              >
-                Skill
-              </Link>
-              <Link
-                href="/profile"
-                className={`list-none p-2 ${
-                  pathname == "/profile" ? "bg-blue-300" : "bg-blue-200"
-                } mr-[1px] rounded-t-lg hover:bg-blue-400`}
-              >
-                Profile
-              </Link>
+          <div className="row-span-3 col-span-4 sm:pl-10">
+            <ul className="flex font-bold text-center text-lg">
+              {menus.map((menu, idx) => {
+                return (
+                  <Link
+                    key={idx}
+                    href={menu.url}
+                    className={`list-none py-2 px-5 basis-2/6 border-b-4 ${
+                      pathname == menu.url
+                        ? "border-sky-800 text-sky-800"
+                        : "border-sky-400 text-sky-400"
+                    } ml-[2px] mr-[2px] sm:ml-0 sm:mr-[1px] mt-5 sm:mt-0 rounded-t-lg hover:border-sky-500 hover:text-sky-500`}
+                  >
+                    {menu.name}
+                  </Link>
+                );
+              })}
             </ul>
             <article className="min-h-[650px] min-w-screen">{children}</article>
           </div>
