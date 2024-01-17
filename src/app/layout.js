@@ -18,9 +18,9 @@ const notoSansKr = Noto_Sans_KR({
 export default function RootLayout({ children }) {
   const pathname = usePathname();
   const menus = [
-    { name: "Main", url: "/" },
+    { name: "Profile", url: "/" },
     { name: "Skill", url: "/skill/" },
-    { name: "Profile", url: "/profile/" },
+    { name: "Project", url: "/project/" },
   ];
 
   return (
