@@ -57,8 +57,10 @@ export default function Home() {
           })}
         </div>
         <li className="list-none text-xl font-bold mt-10 p-3 sm:p-0">
-          추가 예정
+          스킬 상세
         </li>
+
+        <div className="w-full text-sm mt-3 "></div>
         <div className="w-full text-sm mt-3 "></div>
       </div>
     </>
