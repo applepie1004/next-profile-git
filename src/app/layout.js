@@ -18,8 +18,8 @@ const notoSansKr = Noto_Sans_KR({
 export default function RootLayout({ children }) {
   const pathname = usePathname();
   const menus = [
-    { name: "Profile", url: "/" },
-    { name: "Skill", url: "/skill/" },
+    // { name: "Profile", url: "/" },
+    { name: "Skill", url: "/" },
     { name: "Project", url: "/project/" },
   ];
 
@@ -90,13 +90,13 @@ export default function RootLayout({ children }) {
             </div>
           </div>
           <div className="row-span-3 col-span-4 sm:pl-10">
-            <ul className="flex font-bold text-center text-lg">
+            <ul className="flex font-bold text-center text-3xl">
               {menus.map((menu, idx) => {
                 return (
                   <Link
                     key={idx}
                     href={menu.url}
-                    className={`list-none py-2 px-5 basis-2/6 border-b-4 ${
+                    className={`list-none py-2 px-5 basis-1/2 border-b-4 ${
                       pathname == menu.url
                         ? "border-sky-800 text-sky-800"
                         : "border-sky-400 text-sky-400"
